@@ -405,7 +405,7 @@ io.of("/stream").on("connection", (socket) => {
         //mentor is not present then user no data is recorded
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -418,7 +418,7 @@ io.of("/stream").on("connection", (socket) => {
       streamMentorSoIdToUid[socket.id] = mentorId;
     } catch (error) {
       console.log(error);
-      next(error);
+      console.log(error);
     }
 
     // console.log(socket.id);
@@ -459,7 +459,7 @@ io.of("/stream").on("connection", (socket) => {
         }
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -474,7 +474,7 @@ io.of("/stream").on("connection", (socket) => {
         classDetails,
       });
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -488,7 +488,7 @@ io.of("/stream").on("connection", (socket) => {
           user: streamUserSoIdToUid[socket.id],
         });
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -509,7 +509,7 @@ io.of("/stream").on("connection", (socket) => {
         });
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
   // mentor mute status
@@ -526,7 +526,7 @@ io.of("/stream").on("connection", (socket) => {
         });
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
   socket.on("mentor_mute_mic", (payload) => {
@@ -540,7 +540,7 @@ io.of("/stream").on("connection", (socket) => {
         });
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
   //user leave
@@ -566,7 +566,7 @@ io.of("/stream").on("connection", (socket) => {
         delete streamUserSoIdToUid[socket.id];
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -586,7 +586,7 @@ io.of("/stream").on("connection", (socket) => {
         });
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -618,7 +618,7 @@ io.of("/stream").on("connection", (socket) => {
         });
       }
     } catch (error) {
-      next(error);
+      console.log(error);
     }
   });
 
@@ -658,7 +658,7 @@ app.post("/mail", async (req, res, next) => {
     //mail end
     res.send({ data: send });
   } catch (error) {
-    next(error);
+    console.log(error);
   }
 });
 //check
