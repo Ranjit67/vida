@@ -78,6 +78,7 @@ const recordRaw = {};
 //start
 io.on("connection", (socket) => {
   socket.on("mentor start class", async (payload) => {
+    console.log(payload);
     const { mentorId, scheduleID } = payload;
     // console.log(room[mentorId]);
     if (room?.[mentorId]?.length > 0 && schedule[mentorId] === scheduleID) {
