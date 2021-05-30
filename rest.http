@@ -1,0 +1,13 @@
+### mail send
+POST http://localhost:4000/mail
+Content-Type: application/json
+
+{
+     "toEmail":["sahooranjit519@gmail.com"],
+      "body":"My name is ranjit sahoo",
+      "subject":"This is the subject",
+      "displayFromSideName":"ranjit sahoo",
+      "cc":"gouravkumar99311@gmail.com",
+      "bcc":"ranjitsahoo873@gmail.com"
+       
+}
